@@ -8,9 +8,9 @@ export default class Card extends Component {
         this.onChangeNameHandler = this.onChangeNameHandler.bind(this);
     }
 
-    onChangeNameHandler(valueFromAvatar) {
+    onChangeNameHandler(val) {
         // Calling the function that we receive as prop from the App component
-        this.props.onAvatarClick(valueFromAvatar);
+        this.props.onAvatarClick(val, this.props.id);
     }
 
     render() {
