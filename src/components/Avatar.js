@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import reverseString from '../helpers/reverseString';
 
 export default class Avatar extends Component {
     constructor(props) {
@@ -9,7 +10,7 @@ export default class Avatar extends Component {
 
     handleClick() {
         // Calling the function that we receive as prop from the Card component
-        this.props.onChangeName(`hello from ${this.props.userName}`);
+        this.props.onChangeName(reverseString(this.props.userName));
     }
 
     render() {
